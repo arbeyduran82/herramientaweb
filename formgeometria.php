@@ -1,6 +1,6 @@
 <?php
   include 'includes/header.php';
-  include 'controladorgeometria.php';
+  include 'controlador/controladorgeometria.php';
   //Se crea objeto de tipo figura
   $objFiguras = new Figuras();
 
