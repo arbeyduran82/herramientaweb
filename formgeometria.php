@@ -57,14 +57,15 @@
         <div class="col-md-6" style="text-align:center; padding-top: 7px;" >
           <br>
           <div class="alert alert-secondary"  role="alert" style="height:125px ;">
-          <!-- Llama al metodo segun la opcion seleccionada
+          <!-- Llama al metodo segun la opcion seleccionada -->
           <?php
             if(!empty($_POST['calcular'])){
               if($_REQUEST['selfigura'] == 1){
                 $objFiguras->Cuadrado($_REQUEST['base'], $_REQUEST['altura'], $_REQUEST['calcular']);
-
+                
               }else{
                 $objFiguras->Rectangulo($_REQUEST['base'], $_REQUEST['altura'], $_REQUEST['calcular']);
+              
               }
             }
           ?>
