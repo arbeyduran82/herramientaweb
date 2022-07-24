@@ -1,44 +1,13 @@
 <?php
+class Salarios{
+    public function Incremento($Salario, $Porcentaje, $Calcular){
+        if($Calcular == true){
+            $incrementoSalario = $Salario * $Porcentaje;
+            $salarioTotal = $Salario + $incrementoSalario;
+            echo "Su nuevo salario es: " . $salarioTotal;
 
-$Salario = $_POST["txtsalario"];
-$Perfil = $_POST["selperfil"];
-$Incremento = ($Salario * $Perfil)/100;
-$Resultado = $Incremento + $Salario;
-
-
-//----------------------------------------
-/*
-class calcularIncremento{
-    public $Salario;
-    public $Perfil;
-
-
-}*/
-//-----------------------------------------
-
-class mostrarIncremento{
-    public $Resultado;
-
-    //Constructor
-    function __construct($Resultado){
-        $this->Resultado = $Resultado;
-    }
-    //Metodos get y set
-    function get_Resultado(){
-        return $this->Resultado;
-    }
-    function set_Resultado($Resultado){
-        $this->Resultado = $Resultado;
+        }else{
+            echo "Error al incrementar el salario";
+        }
     }
 }
-
-// se crea el objeto Incremento
-$Incremento = new mostrarIncremento(null);
-
-//se pasa la variable $Resultado por medio del objeto y el setter
-$Incremento->set_Resultado($Resultado);
-
-//imprime el resultado
-echo $Incremento->get_Resultado();
-
-
