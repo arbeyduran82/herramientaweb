@@ -73,7 +73,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="formcafe.php" class="nav-link">
               <i class="nav-icon fas fa-coffee"></i>
               <p>Ciber Cafe.</p>
             </a>
