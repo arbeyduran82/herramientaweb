@@ -1,9 +1,9 @@
 <?php
 class Salarios{
-    public function Incremento($Salario, $Porcentaje, $Calcular){
-        if($Calcular == true){
-            $incrementoSalario = $Salario * $Porcentaje;
-            $salarioTotal = $Salario + $incrementoSalario;
+    public function Incremento($salario, $perfil, $calcular){
+        if($calcular == true){
+            $incrementoSalario = ($salario * $perfil)/100;
+            $salarioTotal = $salario + $incrementoSalario;
             echo "Su nuevo salario es: " . $salarioTotal;
 
         }else{

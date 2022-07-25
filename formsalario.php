@@ -28,12 +28,12 @@ $objSalario = new Salarios();
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">$</span>
             </div>
-            <input type="number" class="form-control" placeholder="Ingrese el salario basico" name="txtsalario" aria-label="Username" aria-describedby="basic-addon1" required>
+            <input type="number" class="form-control" placeholder="Ingrese el salario basico" name="salario" aria-label="Username" aria-describedby="basic-addon1" required>
           </div>
          
           <div class="form-group">
             <label for="perfil">Perfil del empleado</label>
-            <select class="form-control" id="perfil" name="selperfil" required>
+            <select class="form-control" id="perfil" name="perfil" required>
             <option></option>
               <option value="20">Sindicalizado</option>
               <option value="10">De confianza</option>
@@ -41,14 +41,28 @@ $objSalario = new Salarios();
               <option value="0">Ejecutivo</option>
             </select>
           </div>
-          <button type="submit" name="sueldo" value="sueldo" class="btn btn-success">Calcular</button>
+          <button type="submit" name="calcular" value="calcular" class="btn btn-success">Calcular</button>
         </form>
 
        </div>
         <div class="col-md-6" style="text-align:center; padding-top: 7px;" >
           <br>
           <div class="alert alert-secondary"  role="alert" style="height:125px ;">
-            Alerta!
+           <!-- Llama al metodo segun la opcion seleccionada -->
+          <?php
+            if(!empty($_POST['calcular'])){
+              if($_REQUEST['perfil'] == 20){
+                $objSalario->Incremento($_REQUEST['salario'], $_REQUEST['perfil'], $_REQUEST['calcular']);
+                //echo "si es 20";
+              }elseif($_REQUEST['perfil'] == 10) {
+                $objSalario->Incremento($_REQUEST['salario'], $_REQUEST['perfil'], $_REQUEST['calcular']);
+              }elseif ($_REQUEST['perfil'] == 5) {
+                $objSalario->Incremento($_REQUEST['salario'], $_REQUEST['perfil'], $_REQUEST['calcular']);
+              }else{
+                $objSalario->Incremento($_REQUEST['salario'], $_REQUEST['perfil'], $_REQUEST['calcular']);
+              }
+            }
+          ?>
           </div>
         </div>
         </div>
