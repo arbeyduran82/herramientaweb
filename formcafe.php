@@ -30,14 +30,14 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Inicio</span>
             </div>
-            <input type="text" class="form-control" placeholder="Ingrese hora inicial" name="horainicial" aria-label="Username" aria-describedby="basic-addon1" required>
+            <input type="text" class="form-control" placeholder="Ingrese hora inicial  (ejemplo 14:00)" name="horainicial" aria-label="Username" aria-describedby="basic-addon1" required>
           </div>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">Final</span>
             </div>
-            <input type="text" class="form-control" placeholder="Ingrese hora final" name="horafinal" aria-label="Username" aria-describedby="basic-addon1" required>
+            <input type="text" class="form-control" placeholder="Ingrese hora final  (ejemplo 16:00)" name="horafinal" aria-label="Username" aria-describedby="basic-addon1" required>
           </div>
          
           <button type="submit" name="calcular" value="calcular" class="btn btn-success">Calcular</button>
