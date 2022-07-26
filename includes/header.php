@@ -87,7 +87,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="formfacturar.php" class="nav-link">
               <i class="nav-icon fas fa-barcode"></i>
               <p>Factura Autoboy.</p>
             </a>
